@@ -1,0 +1,45 @@
+.p {
+  width: 100%; /* Adjust width as needed */
+  height: 100%; /* Adjust height as needed */
+  margin: 30px 20px;
+  border: 2px solid ;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.p-browser {
+  height: 30px;
+  background-color: rgb(243, 242, 242);
+  display: flex;
+  align-items: center;
+  position: sticky; /* Stick browser bar at top */
+  top: 0;
+  z-index: 2;
+}
+
+.p-circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin: 3px;
+  background-color: #3b3b3b;
+}
+
+.p-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.p:hover .p-img {
+  transform: scale(1.05); /* Example of hover effect */
+}
+
+@media screen and (max-width: 480px) {
+  .p {
+    width: 100%; /* Full width on smaller screens */
+    height: auto; /* Auto height to adjust */
+  }
+}

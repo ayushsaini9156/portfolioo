@@ -1,0 +1,55 @@
+{
+    "skills": [
+      {
+        "src": "../../img/java.png",
+        "title": "Java",
+        "description": ""
+      },
+      {
+        "src": "../../img/cpp.png",
+        "title": "C++",
+        "description": ""
+      },
+      {
+        "src": "../../img/html.png",
+        "title": "HTML",
+        "description": ""
+      },
+      {
+        "src": "../../img/css.png",
+        "title": "CSS",
+        "description": ""
+      },
+      {
+        "src": "../../img/js.png",
+        "title": "JavaScript",
+        "description": ""
+      },
+      {
+        "src": "../../img/mongodb.png",
+        "title": "MongoDB",
+        "description": ""
+      },
+      {
+        "src": "../../img/express.png",
+        "title": "Express.js",
+        "description": ""
+      },
+      {
+        "src": "../../img/react.png",
+        "title": "React.js",
+        "description": ""
+      },
+      {
+        "src": "../../img/node.png",
+        "title": "Node.js",
+        "description": ""
+      },
+      {
+        "src": "../../img/android.png",
+        "title": "Android Development",
+        "description": ""
+      }
+    ]
+  }
+  

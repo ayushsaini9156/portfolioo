@@ -1,0 +1,58 @@
+.skills {
+    padding: 2rem 0;
+    background-color: #D71313;
+    text-align: center;
+    color: black;
+    
+  }
+  .shd{
+    color:white;
+    text-align: center;
+  }
+  .hs{
+    color:#DADADA;
+  }
+  
+  .skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .skill-item {
+    width: 200px; /* Set width for each skill item */
+    height: 250px; /* Set height for each skill item */
+    margin: 1rem;
+    text-align: center;
+    background-color: #fff; /* Background color for each skill item */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 1rem;
+  }
+  
+  .skill-item h3 {
+    font-size: 1rem; /* Skill title font size */
+    margin-top: 0rem;
+    margin-bottom:1px;
+  }
+  
+  .skill-item p {
+    font-size: 1rem; /* Skill description font size */
+    color: black;
+  }
+  
+  .skill-item img {
+    width: 100%; /* Ensure image fills its container */
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 1rem; /* Space between image and text */
+  }
+  
