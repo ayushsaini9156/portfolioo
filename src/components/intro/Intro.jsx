@@ -25,12 +25,7 @@ const Intro = () => {
               <div className="i-title-item">Full Stack Developer</div>
             </div>
           </div>
-          <p className="i-desc">
-            Hi, I'm Ayush Saini, currently in my final year studying Computer
-            Science Engineering at ABES Engineering College, Ghaziabad. I love
-            working with new technologies and solving problems. My goal is to
-            contribute meaningfully to new projects and learn as much as I can.
-          </p>
+          
           <button
             className={`i-resume-button ${clicked ? "clicked" : ""}`}
             onClick={handleClick}
