@@ -13,8 +13,8 @@ export const products = [
   },
   {
     id: 3,
-    img: require("./img/passGenerator.png").default,  
-    link: "https://github.com/vaishaliigarg/Social-media-react-app/tree/master",
+    img: require("./img/passGenerator.png").default,
+    link: "https://passw-generatorr.netlify.app/",
   },
 ];
   

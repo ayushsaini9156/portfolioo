@@ -8,7 +8,7 @@ const Intro = () => {
   const handleClick = () => {
     setClicked(true);
     window.open(
-      "https://drive.google.com/file/d/18edAfY_mpssjGDfZcnDAihVrWVul-nlW/view?usp=sharing"
+      "https://drive.google.com/file/d/1AsPrDe9Kub_La4LLx4CNd-AWskALe2L7/view?usp=drive_link"
     );
   };
 
