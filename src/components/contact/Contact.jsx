@@ -7,44 +7,46 @@ import emailjs from "emailjs-com";
 import { ThemeContext } from "../../context";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { FaCheckCircle, FaTimesCircle, FaSpinner } from "react-icons/fa";
 
 const Contact = () => {
   const formRef = useRef();
-  const [done, setDone] = useState(false);
+  const [status, setStatus] = useState("idle"); // idle | loading | success | error
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setStatus("loading");
+
     emailjs
       .sendForm(
-        "service_j81j72s", // EmailJS service ID
-        "template_4u4ag2f", // EmailJS template ID
+        "service_7lhntjl", // Replace with your actual service ID
+        "template_ztowl3b", // Replace with your actual template ID
         formRef.current,
-        "kvLTA8f4wBY4zMSWi" // Your EmailJS user ID
+        "zvPEW8dEvKGI5jNfl" // Replace with your actual public key
       )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setDone(true);
-          toast.success("Message sent successfully!"); // Toast notification on success
-          resetForm();
-        })
-      .catch(
-        (error) => {
-          console.error("Error sending email:", error);
-          toast.error("Failed to send message."); // Toast notification on error
-        });
+      .then((result) => {
+        console.log(result.text);
+        toast.success("Message sent successfully!");
+        setStatus("success");
+        resetForm();
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+        toast.error("Failed to send message.");
+        setStatus("error");
+      });
   };
 
   const resetForm = () => {
-    formRef.current.reset(); // Reset form fields
-    setDone(false); // Reset the "done" state to hide the thank you message
+    formRef.current.reset();
+    setTimeout(() => setStatus("idle"), 4000); // Reset icon after a delay
   };
 
   return (
     <div className="c">
-      <ToastContainer /> {/* Toast container for notifications */}
+      <ToastContainer />
       <div className="c-bg"></div>
       <div className="c-wrapper">
         <div className="c-left">
@@ -52,52 +54,95 @@ const Contact = () => {
           <div className="c-info">
             <div className="c-info-item">
               <img src={Phone} alt="" className="c-icon" />
-              +91 6396177058
+              +91 9193459156
             </div>
             <div className="c-info-item">
               <img className="c-icon" src={Email} alt="" />
-              guptavaishi@gmail.com
+              ayushsaini16703@gmail.com
             </div>
             <div className="c-info-item">
               <img className="c-icon" src={Address} alt="" />
-              550/94, Mohali, Punjab, India
+              Crossing Republik, Ghaziabad, 201016
             </div>
           </div>
         </div>
+
         <div className="c-right">
-          <p className="c-desc">
-            
-          </p>
           <form ref={formRef} onSubmit={handleSubmit}>
             <input
               style={{ backgroundColor: darkMode && "#333" }}
               type="text"
               placeholder="Name"
               name="user_name"
-              required // Adding required attribute for validation
+              required
+              disabled={status === "loading"}
             />
             <input
               style={{ backgroundColor: darkMode && "#333" }}
               type="text"
               placeholder="Subject"
               name="user_subject"
+              disabled={status === "loading"}
             />
             <input
               style={{ backgroundColor: darkMode && "#333" }}
               type="email"
               placeholder="Email"
               name="user_email"
-              required // Adding required attribute for validation
+              required
+              disabled={status === "loading"}
             />
             <textarea
               style={{ backgroundColor: darkMode && "#333" }}
               rows="5"
               placeholder="Message"
               name="message"
-              required // Adding required attribute for validation
+              required
+              disabled={status === "loading"}
             />
-            <button type="submit">Submit</button>
-            {done && "Thank you..."}
+            <button
+              type="submit"
+              disabled={status === "loading"}
+              style={{
+                backgroundColor: status === "loading" ? "#888" : "#4CAF50",
+                color: "#fff",
+                padding: "10px 20px",
+                border: "none",
+                cursor: status === "loading" ? "not-allowed" : "pointer",
+                transition: "background-color 0.3s ease",
+              }}
+            >
+              {status === "loading" ? "Sending..." : "Submit"}
+            </button>
+
+            <div style={{ marginTop: "10px", height: "30px" }}>
+              {status === "loading" && (
+                <FaSpinner
+                  style={{
+                    color: "#888",
+                    animation: "spin 1s linear infinite",
+                  }}
+                />
+              )}
+              {status === "success" && (
+                <FaCheckCircle
+                  style={{
+                    color: "green",
+                    fontSize: "1.5rem",
+                    transition: "opacity 0.3s ease",
+                  }}
+                />
+              )}
+              {status === "error" && (
+                <FaTimesCircle
+                  style={{
+                    color: "red",
+                    fontSize: "1.5rem",
+                    transition: "opacity 0.3s ease",
+                  }}
+                />
+              )}
+            </div>
           </form>
         </div>
       </div>

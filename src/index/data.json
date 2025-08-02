@@ -1,13 +1,13 @@
 {
     "skills": [
       {
-        "src": "../../img/java.png",
-        "title": "Java",
+        "src": "../../img/cpp.png",
+        "title": "C++",
         "description": ""
       },
       {
-        "src": "../../img/cpp.png",
-        "title": "C++",
+        "src": "../../img/python.png",
+        "title": "Python",
         "description": ""
       },
       {
@@ -46,8 +46,8 @@
         "description": ""
       },
       {
-        "src": "../../img/android.png",
-        "title": "Android Development",
+        "src": "../../img/tailwind.png",
+        "title": "tailwindcss",
         "description": ""
       }
     ]

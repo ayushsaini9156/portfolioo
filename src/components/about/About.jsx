@@ -21,7 +21,7 @@ const About = () => {
          
         </p>
         <p className="a-desc">
-        Hello! I'm Vaishali Garg, an aspiring software developer currently studying Computer Science Engineering at Chandigarh Group of Colleges, Landran. I am passionate about web and Android development, with a strong interest in full-stack development and problem-solving. I enjoy delving into new technologies and leveraging them to create impactful solutions. Let's connect and explore how we can innovate together!
+        Hello! I'm Ayush Saini, an aspiring software developer currently studying Computer Science at ABES Engineering College, Ghaziabad. I am passionate about web development, with a strong interest in full-stack development and problem-solving. I enjoy delving into new technologies and leveraging them to create impactful solutions. Let's connect and explore how we can innovate together!
         </p>
       
       </div>

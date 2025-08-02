@@ -3,7 +3,7 @@ import skillsData from '../../index/data.json'; // Adjust the path based on your
 import './myskills.css'; // Import CSS file for styling
 
 // Importing images
-import javaImage from '../../img/java.jpg';
+import pythonImage from '../../img/python.png';
 import cppImage from '../../img/cpp.png';
 import htmlImage from '../../img/html.png';
 import cssImage from '../../img/css.jpg';
@@ -12,7 +12,7 @@ import mongodbImage from '../../img/mongodb.jpg';
 import expressImage from '../../img/express.png';
 import reactImage from '../../img/react.png';
 import nodeImage from '../../img/node.png';
-import androidImage from '../../img/android.png';
+import tailwindImage from '../../img/tailwind.png';
 
 const Myskills = () => {
   return (
@@ -34,10 +34,10 @@ const Myskills = () => {
 // Helper function to render images based on skill title
 const renderSkillImage = (title) => {
   switch (title) {
-    case 'Java':
-      return <img src={javaImage} alt="Java" />;
     case 'C++':
       return <img src={cppImage} alt="C++" />;
+    case 'Python':
+      return <img src={pythonImage} alt="Python" />;
     case 'HTML':
       return <img src={htmlImage} alt="HTML" />;
     case 'CSS':
@@ -52,8 +52,8 @@ const renderSkillImage = (title) => {
       return <img src={reactImage} alt="React.js" />;
     case 'Node.js':
       return <img src={nodeImage} alt="Node.js" />;
-    case 'Android Development':
-      return <img src={androidImage} alt="Android Development" />;
+    case 'tailwindcss':
+      return <img src={tailwindImage} alt="tailwind css" />;
     default:
       return null;
   }

@@ -4,9 +4,9 @@ import { products } from '../../data'; // Adjust path based on actual file struc
 import "./productlist.css"; // Import productlist.css for styling
 
 // Importing images (adjust paths as per your file structure)
-import eCommImage from '../../img/e-commerce.png';
-import nftImage from '../../img/nft.png';
-import socialMediaImage from '../../img/social media.jpg';
+import codeReviewImg from '../../img/code-reviewer.png';
+import currImage from '../../img/currency-exchanger.png';
+import passGenImage from '../../img/passGenerator.png';
 import androidImage from '../../img/notes.png';
 
 const ProductList = () => {
@@ -14,11 +14,11 @@ const ProductList = () => {
   const getProductImage = (productId) => {
     switch (productId) {
       case 1:
-        return eCommImage;
+        return codeReviewImg;
       case 2:
-        return nftImage;
+        return currImage;
       case 3:
-        return socialMediaImage;
+        return passGenImage;
       case 4:
         return androidImage;
       default:

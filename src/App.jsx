@@ -6,6 +6,8 @@ import ProductList from "./components/productlist/ProductList";
 import Toggle from "./components/toggle/Toggle";
 import Myskills from "./components/myskills/Myskills";
 import { ThemeContext } from "./context";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   const theme = useContext(ThemeContext);
@@ -20,9 +22,10 @@ const App = () => {
       <Toggle />
       <Intro />
       <About />
-      <Myskills/>
-      <ProductList/>
+      <Myskills />
+      <ProductList />
       <Contact />
+      <ToastContainer />
     </div>
   );
 };
